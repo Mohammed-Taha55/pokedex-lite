@@ -16,7 +16,7 @@ export default function Navbar({ searchQuery, onSearchChange, showFavOnly, onTog
             <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-800 -translate-y-1/2" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-white rounded-full border-2 border-gray-800 z-10" />
           </div>
-          <h1 className="text-xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-xl font-bold text-gray-900 tracking-tight"> 
             Pokédex <span className="text-red-500">Lite</span>
           </h1>
         </div>

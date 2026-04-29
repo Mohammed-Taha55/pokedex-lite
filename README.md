@@ -74,3 +74,10 @@ pokedex-lite/
 ## API
 
 Data sourced from [PokéAPI](https://pokeapi.co/) — free, no key required.
+
+
+Challenges & Learnings
+- Handling pagination efficiently without over-fetching data.
+- Managing favorites persistence with local storage while keeping the UI reactive.
+- Ensuring responsive design across different screen sizes using Tailwind utilities.
+- Debugging PokéAPI quirks (e.g., type filtering and nested data structures)
