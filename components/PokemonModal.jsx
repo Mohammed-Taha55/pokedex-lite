@@ -5,7 +5,7 @@ import Image from "next/image";
 import { getSpriteUrl, formatPokemonNumber } from "@/lib/api";
 import { TYPE_COLORS, STAT_LABELS } from "@/lib/constants";
 import { usePokemonDetail } from "@/hooks/usePokemonDetail";
-import LoadingSpinner from "./LoadingSpinner";
+import SkeletonModalContent from "./SkeletonModalContent";
 
 export default function PokemonModal({ pokemon, isFavorite, onToggleFav, onClose }) {
   const { detail, loading, error } = usePokemonDetail(pokemon?.name);
@@ -142,7 +142,7 @@ export default function PokemonModal({ pokemon, isFavorite, onToggleFav, onClose
           )}
 
           {/* base stats */}
-          {loading && <LoadingSpinner />}
+          {loading && <SkeletonModalContent />}
           {error && <p className="text-red-400 text-sm text-center">{error}</p>}
           {detail?.stats?.length > 0 && (
             <div>

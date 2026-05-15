@@ -20,6 +20,31 @@
 .animate-fadeIn  { animation: fadeIn 0.2s ease forwards; }
 .animate-slideUp { animation: slideUp 0.25s ease forwards; }
 
+/* shimmer overlay for skeletons */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0;  }
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255 255 255 / 0.45) 50%,
+    transparent 100%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
 
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */

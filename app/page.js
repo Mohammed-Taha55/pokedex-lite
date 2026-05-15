@@ -9,7 +9,7 @@ import TypeFilter from "@/components/TypeFilter";
 import PokemonGrid from "@/components/PokemonGrid";
 import Pagination from "@/components/Pagination";
 import PokemonModal from "@/components/PokemonModal";
-import LoadingSpinner from "@/components/LoadingSpinner";
+import SkeletonGrid from "@/components/SkeletonGrid";
 import ErrorMessage from "@/components/ErrorMessage";
 
 export default function HomePage() {
@@ -98,7 +98,7 @@ export default function HomePage() {
         )}
 
         {isLoading ? (
-          <LoadingSpinner />
+          <SkeletonGrid />
         ) : error && !showFavOnly ? (
           <ErrorMessage message={error} />
         ) : (
